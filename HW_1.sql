@@ -1,4 +1,18 @@
 use hogwarts;
++---------+----------+------------+------+------------+----------------------+---------+
+| char_id | fname    | lname      | age  | faculty    | patronus             | book_id |
++---------+----------+------------+------+------------+----------------------+---------+
+|       1 | Harry    | Potter     |   11 | Gryffindor | Stag                 |      10 |
+|       2 | Hermione | Granger    |   11 | Gryffindor | Otter                |       9 |
+|       3 | Ron      | Weasley    |   11 | Gryffindor | Jack Russell terrier |       8 |
+|       4 | Draco    | Malfoy     |   11 | Slytherin  | NULL                 |       6 |
+|       5 | Vincent  | Crabbe     |   11 | Slytherin  | NULL                 |       6 |
+|       6 | Gregory  | Goyle      |   11 | Slytherin  | NULL                 |       1 |
+|       7 | Albus    | Dumbledore |  111 | Gryffindor | Phoenix              |       2 |
+|       8 | Luna     | Lovegood   |   11 | Ravenclaw  | Hare                 |       2 |
+|       9 | Cedric   | Diggory    |   14 | Hufflepuff | Unknown              |       3 |
+|      10 | Severus  | Snape      |   55 | Slytherin  | Doe                  |       4 |
++---------+----------+------------+------+------------+----------------------+---------+
 
 /* Выведите имя, фамилию, патронуса всех персонажей, у которых есть patronus и он известен*/
 select fname, lname, patronus from characters where patronus is not null;
